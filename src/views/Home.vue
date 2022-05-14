@@ -1,8 +1,9 @@
 <template>
-  <div class="home">
+  <div>
     <input type="text" placeholder="Pokemon zoeken" class="border-2 p-2 text-center rounded-xl m-3" v-model="filterPokemon">
     
-    <div v-for="pokemon in filteredItems" :key="pokemon.id" class="flex p-2 m-3 border-2 rounded-xl justify-between capitalize">
+    <div v-for="pokemon in filteredItems" :key="pokemon.id" >
+        <router-link class="flex p-2 m-3 border-2 rounded-xl justify-between capitalize" :to="{ name: 'Details', params: { id: pokemon.id, name: pokemon.name, img: pokemon.sprites.front_default} }">
       <div class="flex">
         <img :src=pokemon.sprites.front_default alt="" class="">
       <div class="flex-col m-2">
@@ -14,7 +15,8 @@
           <p class="text-right border-2 m-1 rounded-xl h-8 py-1 px-3">{{pokemon.types[0].type.name}}</p>
           <p class="text-center border-2 m-1 rounded-xl h-8 py-1 px-3" v-if="pokemon.types.length > 1">{{pokemon.types[1].type.name}}</p>
           <p class="m-2">></p>
-        </div>
+      </div>
+        </router-link>
     </div>
     
   </div>
@@ -61,4 +63,5 @@ export default {
   p{
     font-size: 12px;
   }
+  
 </style>
