@@ -16,12 +16,9 @@
         </div> 
       </div>
       <div class="flex">
-        <div class="m-0 float-right" v-for="type in pokemon.types" :key="pokemon.name + type.type.name">
-                <span class="type" :id="type.type.name">{{type.type.name}}</span>
+        <div class="m-0" v-for="type in pokemon.types" :key="pokemon.name + type.type.name">
+                <span class="text-right m-1 rounded-xl h-8 py-1 px-3 text-white" :id="type.type.name">{{type.type.name}}</span>
             </div>
-          <!-- <p class="text-right border-2 m-1 rounded-xl h-8 py-1 px-3">{{pokemon.types[0].type.name}}</p>
-          <p class="text-center border-2 m-1 rounded-xl h-8 py-1 px-3" v-if="pokemon.types.length > 1">{{pokemon.types[1].type.name}}</p>
-          <p class="m-2">></p> -->
       </div>
         </router-link>
     </div>
@@ -65,22 +62,10 @@ export default {
 </script>
 
 <style scoped>
-  img{
-    height: 70px;
-    width: 70px;
-  }
+  
   .pokedex{
     background: #FFFFFF;
   }
-  .type {
-    color: white;
-    border-radius: 50px;
-    margin: 0 0.2em;
-    padding: 0.1em 0.7em;
-    width: fit-content;
-    text-align: center;
-    font-size: 0.8em;
-}
 #grass {
     background-color: #95C24D;
 }

@@ -68,6 +68,5 @@ export default {
   input[type="text"]{
     padding-left: 35px;
     text-align: left;
-    
   }
 </style>
