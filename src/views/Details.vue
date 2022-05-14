@@ -1,7 +1,8 @@
 <template>
-  <p>pokemon id is {{id}}</p>
-  <p>Name is {{name}}</p>
+<div>
+  <h1 class="text-left p-4 text-4xl capitalize font-bold">{{name}}</h1>
   <img :src=img alt="">
+</div>
 </template>
 
 <script>
