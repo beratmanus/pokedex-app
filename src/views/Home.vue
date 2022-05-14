@@ -1,10 +1,11 @@
 <template>
   <div class="home">
-    <div class="m-4 flex justify-end">
+    <div class="mx-4 mb-4 flex justify-end">
 
     <button
       type="button"
       @click="showModal"
+      class="m-2"
     >
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
@@ -56,21 +57,14 @@ export default {
   }
 
 </script>
-<style>
-  img{
-    height: 70px;
-    width: 70px;
-  }
-
+<style scoped>
   p{
     font-size: 12px;
   }
   .home{
     background: #F9F9F9;
   }
-  .pokedex{
-    background: #FFFFFF;
-  }
+  
   input[type="text"]{
     padding-left: 35px;
     text-align: left;
