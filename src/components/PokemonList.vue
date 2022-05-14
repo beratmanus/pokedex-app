@@ -7,7 +7,7 @@
     </div>
     
   <div class="drop-shadow-2xl" v-for="pokemon in filteredItems" :key="pokemon.id" >
-        <router-link class="flex p-2 m-3 pokedex  rounded-xl justify-between capitalize" :to="{ name: 'Details', params: { id: pokemon.id, name: pokemon.name, img: pokemon.sprites.front_default} }">
+        <router-link class="flex p-2 m-3 pokedex  rounded-xl justify-between capitalize" :to="{ name: 'Details', params: { id: pokemon.id, name: pokemon.name, img: pokemon.sprites.front_default, type: pokemon.types[0].type.name} }">
       <div class="flex">
         <img :src=pokemon.sprites.front_default alt="" class="">
       <div class="flex-col m-2">

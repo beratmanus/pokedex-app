@@ -1,7 +1,6 @@
 <template>
-    <h5 class="text-left m-4">INFO</h5>
-    <div class="m-3 border-2 border-black-200 rounded-xl">
- 
+    <h5 class="text-left m-4 text-white">INFO</h5>
+    <div class="m-3 border-2 border-black-200 rounded-xl bg-white">
     <div class="flex m-4 justify-evenly">
         <div class="text-gray-400 text-left m-1 float-left w-full">
             <p>Type</p>
