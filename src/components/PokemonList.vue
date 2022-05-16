@@ -8,16 +8,16 @@
     
   <div class="drop-shadow-2xl" v-for="pokemon in filteredItems" :key="pokemon.id" >
         <router-link class="flex p-2 m-3 pokedex  rounded-xl justify-between capitalize" :to="{ name: 'Details', params: { id: pokemon.id, name: pokemon.name, img: pokemon.sprites.front_default, type: pokemon.types[0].type.name} }">
-      <div class="flex">
+      <div class="flex pokemon">
         <img :src=pokemon.sprites.front_default alt="" class="">
       <div class="flex-col m-2">
           <h2 class="text-left">{{pokemon.name}}</h2>
-          <p class="text-left">Nr. {{pokemon.id}}</p>
+          <p class="text-left text-gray-400">Nr. {{pokemon.id}}</p>
         </div> 
       </div>
       <div class="flex">
         <div class="m-0" v-for="type in pokemon.types" :key="pokemon.name + type.type.name">
-                <span class="text-right m-1 rounded-xl h-8 py-1 px-3 text-white" :id="type.type.name">{{type.type.name}}</span>
+                <span class="type" :id="type.type.name">{{type.type.name}}</span>
             </div>
       </div>
         </router-link>
@@ -66,6 +66,24 @@ export default {
   .pokedex{
     background: #FFFFFF;
   }
+  input{
+    background: #EFF0F1;
+  }
+
+  .pokemon img {
+    width: 70px;
+    height: 70px;
+  }
+  .type {
+    color: white;
+    border-radius: 50px;
+    margin: 0 0.2em;
+    padding: 0.1em 0.7em;
+    width: fit-content;
+    text-align: center;
+    font-size: 0.8em;
+} 
+  
 #grass {
     background-color: #95C24D;
 }

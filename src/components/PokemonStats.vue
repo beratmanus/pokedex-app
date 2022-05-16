@@ -1,5 +1,5 @@
 <template>
-    <h5 class="text-left m-4 text-white">STATISTIEKEN</h5>
+    <h5 class="text-left m-4 text-white font-bold">STATISTIEKEN</h5>
 <div class="m-3 border-2 border-black-200 rounded-xl bg-white">
  
     <div class="flex m-4 justify-evenly">

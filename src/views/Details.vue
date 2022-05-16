@@ -1,10 +1,12 @@
 <template>
 <div :id="type">
-  <button @click="goBack" class="flex p-2"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <button @click="goBack" class="flex p-2"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-</svg> <span class="px-2">Terug</span></button>
+</svg> <span class="px-2 text-white font-bold">Terug</span></button>
+<div class="flex-column ">
   <h1 class="text-left p-4 text-4xl text-white capitalize font-bold">{{name}}</h1>
-  <img :src=img alt="" >
+  <img :src=img alt="" class="block m-auto">
+</div>
   <PokemonInfo />
   <PokemonStats />
   <PokemonMoveset />

@@ -17,7 +17,7 @@
       v-show="isModalVisible"
       @close="closeModal"
     />
-    <h1 class="font-bold text-left pl-4 text-3xl">Pokedex</h1>
+    <h1 class="font-bold text-left pl-4 text-3xl">Pokédex</h1>
     
       <PokemonList />
   </div>
